@@ -19,11 +19,10 @@ window.addEventListener("load", () => {
 ========================= */
 
 const words = [
-  "HTML, CSS, JavaScript (Web Development)",
-  "MySQL (Database Management)",
-  "Google Apps Script (Automation)",
-  "Git & GitHub (Version Control & Project Hosting)",
-  "Reporting Data (Basic Excel / Database)",
+  "HTML, CSS, JavaScript",
+  "MySQL",
+  "Google Apps Script",
+  "Git & GitHub",
 ];
 
 let wordIndex = 0;
