@@ -243,3 +243,45 @@ footer.innerHTML += `<p style="margin-top:15px;">
 © ${year} Mochamad Rizky.
 All Rights Reserved.
 </p>`;
+
+// maps
+const form = document.getElementById("contactForm");
+
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    document.getElementById("loading").style.display = "block";
+
+    const formData = new URLSearchParams();
+
+    formData.append("nama", document.getElementById("nama").value);
+    formData.append("email", document.getElementById("email").value);
+    formData.append("nohp", document.getElementById("nohp").value);
+
+    fetch(
+      "https://script.google.com/macros/s/AKfycbw5xB3NYyyGZoh6ILSPxMwzebK_FbxkNUq6lt7Tu7v2o7cHLpXRXgaz7j_6Q6GGHjHR/exec",
+      {
+        method: "POST",
+        body: formData,
+      },
+    )
+      .then((res) => res.text())
+      .then((res) => {
+        document.getElementById("loading").style.display = "none";
+
+        if (res.trim() === "success") {
+          alert("Pesan berhasil dikirim 👍");
+          form.reset();
+        } else {
+          alert("Gagal menyimpan data ❌");
+        }
+      })
+      .catch((err) => {
+        document.getElementById("loading").style.display = "none";
+        console.error(err);
+        alert("Koneksi bermasalah ❌");
+      });
+  });
+}
+
