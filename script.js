@@ -19,11 +19,11 @@ window.addEventListener("load", () => {
 ========================= */
 
 const words = [
-  "Desk Collection",
-  "Collection Officer",
-  "Customer Handling",
-  "Operational Staff",
-  "Data Reporting",
+  "HTML, CSS, JavaScript (Web Development)",
+  "MySQL (Database Management)",
+  "Google Apps Script (Automation)",
+  "Git & GitHub (Version Control & Project Hosting)",
+  "Reporting Data (Basic Excel / Database)",
 ];
 
 let wordIndex = 0;
