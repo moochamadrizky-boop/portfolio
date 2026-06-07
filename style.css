@@ -548,15 +548,6 @@ footer p {
    MOBILE
 ========================= */
 
-@media (max-width: 768px) {
-  header {
-    padding: 15px 5%;
-  }
-
-  nav {
-    display: none;
-  }
-
   .hero {
     flex-direction: column-reverse;
     text-align: center;
@@ -642,4 +633,61 @@ nav a.active {
   text-align: center;
   margin-top: 15px;
   color: var(--primary);
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Desktop */
+#navbar {
+  display: flex;
+  align-items: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  #navbar {
+    display: none;
+    position: absolute;
+    top: 80px;
+    right: 20px;
+
+    width: 220px;
+
+    background: #1e293b;
+    border-radius: 15px;
+
+    padding: 20px;
+
+    flex-direction: column;
+    gap: 15px;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  }
+
+  #navbar.show {
+    display: flex;
+  }
+
+  #navbar a {
+    margin-left: 0;
+    width: 100%;
+    text-align: left;
+  }
 }
