@@ -766,3 +766,10 @@ nav a.active {
     padding: 80px 5%;
   }
 }
+.light-mode {
+  --dark: #f8fafc;
+  --dark2: #ffffff;
+  --card: #ffffff;
+  --text: #0f172a;
+  --gray: #475569;
+}
