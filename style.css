@@ -767,9 +767,30 @@ nav a.active {
   }
 }
 .light-mode {
-  --dark: #f8fafc;
-  --dark2: #ffffff;
-  --card: #ffffff;
-  --text: #0f172a;
-  --gray: #475569;
+  background: #f8fafc;
+  color: #0f172a;
+}
+.light-mode header {
+  background: #ffffff;
+}
+
+.light-mode nav a {
+  color: #0f172a;
+}
+
+.light-mode .stat-card,
+.light-mode .project-card,
+.light-mode .certificate-card,
+.light-mode .social-card {
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.light-mode .progress {
+  background: #e2e8f0;
+}
+
+.light-mode footer {
+  background: #e2e8f0;
+  color: #0f172a;
 }
