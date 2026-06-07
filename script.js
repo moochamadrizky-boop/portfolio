@@ -284,3 +284,21 @@ if (form) {
   });
 }
 
+/* =========================
+   MOBILE MENU
+========================= */
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+  navbar.classList.toggle("show");
+});
+
+/* Tutup menu setelah klik link */
+
+document.querySelectorAll("#navbar a").forEach((link) => {
+  link.addEventListener("click", () => {
+    navbar.classList.remove("show");
+  });
+});
