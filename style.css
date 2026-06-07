@@ -636,49 +636,30 @@ nav a.active {
 }
 
 /* =========================
-   MOBILE MENU
+   MOBILE
 ========================= */
 
-.menu-toggle {
-  display: none;
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 26px;
-  cursor: pointer;
-}
-
-/* Desktop */
-#navbar {
-  display: flex;
-  align-items: center;
-}
-
-/* Mobile */
 @media (max-width: 768px) {
+
+  header {
+    padding: 15px 5%;
+  }
 
   .menu-toggle {
     display: block;
-    z-index: 1001;
   }
 
   #navbar {
     display: none;
     position: absolute;
-    top: 80px;
-    right: 20px;
-
+    top: 75px;
+    right: 15px;
     width: 220px;
-
     background: #1e293b;
-    border-radius: 15px;
-
-    padding: 20px;
-
+    border-radius: 12px;
+    padding: 15px;
     flex-direction: column;
-    gap: 15px;
-
-    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+    gap: 12px;
   }
 
   #navbar.show {
@@ -687,7 +668,29 @@ nav a.active {
 
   #navbar a {
     margin-left: 0;
-    width: 100%;
-    text-align: left;
+    padding: 8px 0;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  section {
+    padding: 80px 5%;
   }
 }
